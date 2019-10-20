@@ -1,9 +1,8 @@
-import * as MaterialUI from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { useTranslation } from 'react-i18next';
 import * as React from 'react';
-
 import styles from './FilenameTextField.css';
+import { TextField } from '@material-ui/core';
 
 const useStyles = makeStyles(styles);
 
@@ -29,7 +28,7 @@ export const FilenameTextField = (props: Props) => {
   };
 
   return (
-    <MaterialUI.TextField
+    <TextField
       autoFocus
       fullWidth
       id="description"

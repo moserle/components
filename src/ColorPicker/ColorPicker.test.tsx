@@ -70,14 +70,16 @@ it('ColorPicker', () => {
       index: 1,
       visualization: {
         color: '#F44336',
-        visible: true,
+        visible: true
       }
     }
   ];
 
   const onChange = () => {};
 
-  const e = <ColorPicker categories={categories} colors={colors} onChange={onChange} />;
+  const e = (
+    <ColorPicker categories={categories} colors={colors} onChange={onChange} />
+  );
 
   shallow(e);
 });

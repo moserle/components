@@ -1,7 +1,6 @@
 import * as React from 'react';
-import {createElement} from "react";
 
-type Props = {
+type ImageProps = {
   brightness: number;
   contrast: number;
   height: number;
@@ -16,7 +15,7 @@ type Props = {
  * @param props
  * @constructor
  */
-export const Image = (props: Props) => {
+export const Image = (props: ImageProps) => {
   const {
     brightness,
     contrast,

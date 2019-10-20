@@ -8,11 +8,9 @@ it('ColorIconButton', () => {
 
   const onColorChange = () => {};
 
-  const e = <ColorIconButton
-    color={color}
-    colors={[]}
-    onColorChange={onColorChange}
-  />;
+  const e = (
+    <ColorIconButton color={color} colors={[]} onColorChange={onColorChange} />
+  );
 
   shallow(e);
 });

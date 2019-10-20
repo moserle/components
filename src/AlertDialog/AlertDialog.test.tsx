@@ -1,17 +1,17 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import { Dialog } from './Dialog';
+import { AlertDialog } from './AlertDialog';
 
-it('Dialog', () => {
+it('AlertDialog', () => {
   const open = true;
 
   const onClose = () => {};
 
   const e = (
-    <Dialog open={open} onClose={onClose}>
+    <AlertDialog open={open} onClose={onClose}>
       <div />
-    </Dialog>
+    </AlertDialog>
   );
 
   shallow(e);

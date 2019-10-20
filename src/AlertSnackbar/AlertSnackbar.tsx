@@ -1,8 +1,8 @@
-import * as MaterialUI from '@material-ui/core';
 import { SnackbarOrigin } from '@material-ui/core/Snackbar';
 import * as React from 'react';
+import { Snackbar } from '@material-ui/core';
 
-type SnackbarProps = {
+type AlertSnackbarProps = {
   closeSnackbar: () => void;
   message: string;
   openedSnackbar: boolean;
@@ -13,7 +13,7 @@ type SnackbarProps = {
  * @param props
  * @constructor
  */
-export const Snackbar = (props: SnackbarProps) => {
+export const AlertSnackbar = (props: AlertSnackbarProps) => {
   const { closeSnackbar, message, openedSnackbar } = props;
 
   const anchorOrigin: SnackbarOrigin = {
@@ -22,7 +22,7 @@ export const Snackbar = (props: SnackbarProps) => {
   };
 
   return (
-    <MaterialUI.Snackbar
+    <Snackbar
       action={[]}
       anchorOrigin={anchorOrigin}
       autoHideDuration={6000}

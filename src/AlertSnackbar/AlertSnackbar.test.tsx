@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import { Snackbar } from './Snackbar';
+import { AlertSnackbar } from './AlertSnackbar';
 
-it('Snackbar', () => {
+it('AlertSnackbar', () => {
   const closeSnackbar = () => {};
 
   const message = '';
@@ -11,7 +11,7 @@ it('Snackbar', () => {
   const openedSnackbar = true;
 
   const e = (
-    <Snackbar
+    <AlertSnackbar
       closeSnackbar={closeSnackbar}
       message={message}
       openedSnackbar={openedSnackbar}

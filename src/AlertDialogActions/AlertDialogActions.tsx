@@ -1,13 +1,12 @@
-import * as MaterialUI from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { useTranslation } from 'react-i18next';
 import * as React from 'react';
-
-import styles from './DialogActions.css';
+import styles from './AlertDialogActions.css';
+import { Button, DialogActions } from '@material-ui/core';
 
 const useStyles = makeStyles(styles);
 
-type Props = {
+type AlertDialogProps = {
   acceptanceTitle: string;
   cancellationTitle: string;
   onAcceptance: () => void;
@@ -19,7 +18,7 @@ type Props = {
  * @param props
  * @constructor
  */
-export const DialogActions = (props: Props) => {
+export const AlertDialogActions = (props: AlertDialogProps) => {
   const {
     acceptanceTitle,
     cancellationTitle,
@@ -32,20 +31,14 @@ export const DialogActions = (props: Props) => {
   const { t: translation } = useTranslation();
 
   return (
-    <MaterialUI.DialogActions>
-      <MaterialUI.Button
-        classes={{ root: classes.button }}
-        onClick={onCancellation}
-      >
+    <DialogActions>
+      <Button classes={{ root: classes.button }} onClick={onCancellation}>
         {translation(cancellationTitle)}
-      </MaterialUI.Button>
+      </Button>
 
-      <MaterialUI.Button
-        classes={{ root: classes.button }}
-        onClick={onAcceptance}
-      >
+      <Button classes={{ root: classes.button }} onClick={onAcceptance}>
         {translation(acceptanceTitle)}
-      </MaterialUI.Button>
-    </MaterialUI.DialogActions>
+      </Button>
+    </DialogActions>
   );
 };

@@ -1,13 +1,12 @@
-import * as MaterialUI from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { useTranslation } from 'react-i18next';
 import * as React from 'react';
-
-import styles from './DialogTitle.css';
+import styles from './AlertDialogTitle.css';
+import { DialogTitle, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(styles);
 
-type Props = {
+type AlertDialogTitleProps = {
   title: string;
 };
 
@@ -16,7 +15,7 @@ type Props = {
  * @param props
  * @constructor
  */
-export const DialogTitle = (props: Props) => {
+export const AlertDialogTitle = (props: AlertDialogTitleProps) => {
   const { title } = props;
 
   const classes = useStyles({});
@@ -24,10 +23,10 @@ export const DialogTitle = (props: Props) => {
   const { t: translation } = useTranslation();
 
   return (
-    <MaterialUI.DialogTitle disableTypography>
-      <MaterialUI.Typography classes={{ root: classes.root }} variant="h6">
+    <DialogTitle disableTypography>
+      <Typography classes={{ root: classes.root }} variant="h6">
         {translation(title)}
-      </MaterialUI.Typography>
-    </MaterialUI.DialogTitle>
+      </Typography>
+    </DialogTitle>
   );
 };
